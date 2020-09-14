@@ -1,0 +1,20 @@
+.header{
+    height: 60px;
+    display: flex;
+    background-color: #000;
+    position: sticky;
+}
+
+.header-logo{
+    width: 100px;
+    object-fit: contain;
+    margin: 0 20px;
+    margin-top: 18px;   
+}
+
+.header-searchIcon{
+    padding: 5px;
+    height: 22px !important;
+    color: #000;
+    background-color: #cd9042;
+}
