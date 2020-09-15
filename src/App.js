@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
+import Header from "./Header.js";
+import './firebase.js'
+
 
 function App() {
   return (
     <div className="app">
-      <header className="header" > 
+      <Header />
       
-      </header>  
     </div>
   );
 }
