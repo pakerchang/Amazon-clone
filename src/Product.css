@@ -12,17 +12,17 @@
     z-index: 1;
 }
 
-.product p {
-    line-height: 0;
-}
-
 .product__info {
     height: 100px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .product__price {
     margin-top: 5px;
+}
+
+.product__rating {
+    display: flex;
 }
 
 .product > img {

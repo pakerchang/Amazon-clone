@@ -1,9 +1,14 @@
 import React from "react";
-import './Header.css';
-import SearchIcon from '@material-ui/icons/Search';
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import "./Header.css";
+import Product from "./Product";
+import SearchIcon from "@material-ui/icons/Search";
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
-function Header() {
+function Header({ basketCount }) {
+	basketCount = 0;
+	const addBasketCount = () =>{
+		basketCount++;
+	}
 	return (
 		<div className="header">
 			{/* header nav */}
@@ -31,7 +36,9 @@ function Header() {
 				</div>
 				<div className="header__optionBasket">
 					<ShoppingBasketIcon />
-					<span className='header__basketCount header__optionLine2'>0</span>
+					<span className="header__basketCount header__optionLine2">
+						{basketCount}
+					</span>
 				</div>
 			</div>
 		</div>
