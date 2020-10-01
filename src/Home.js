@@ -13,12 +13,14 @@ function Home() {
 				/>
 				<div className="home__row">
 					<Product
+						id="12321341"
 						title="The Learn Startup: How Constant Innovation Creates Radically Successful Businesses Paperback"
-						price={20.99}
+						price={11.96}
 						rating={5}
 						image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"
 					/>
 					<Product
+						id="49538094"
 						title="Kenwood kMix stand Mixer for baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Gass Bowl"
 						price={239.0}
 						rating={4}
@@ -54,7 +56,7 @@ function Home() {
 						title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor - Super Ultra Wide Dual WQHD 5120 x 1440"
 						price={1094.98}
 						rating={4}
-						image='https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg'
+						image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"
 					/>
 				</div>
 			</div>
