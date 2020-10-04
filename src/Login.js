@@ -1,16 +1,34 @@
+import { auth } from "firebase";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
+	const history = useHistory();
 	const [email, setEmail] = useState();
 	const [password, setPassword] = useState();
-    const signIn = e => {
-        e.preventDefault()
-    }
-    const register = e => {
-        e.preventDefault()
-    }
+	const signIn = (e) => {
+		e.preventDefault();
+		auth()
+			.signInWithEmailAndPassword(email, password)
+			.then((auth) => {
+				history.push("/");
+			})
+			.catch((error) => alert(error.message));
+	};
+	const register = (e) => {
+		e.preventDefault();
+
+		auth()
+			.createUserWithEmailAndPassword(email, password)
+			.then((auth) => {
+				console.log(auth);
+				if (auth) {
+					history.push("/");
+				}
+			})
+			.catch((error) => alert(error.message));
+	};
 
 	return (
 		<div className="login">
@@ -39,7 +57,13 @@ function Login() {
 						onChange={(e) => setPassword(e.target.value)}
 						required
 					/>
-					<button className="login__signInBtn" type='submit' onClick={signIn}>Login In</button>
+					<button
+						className="login__signInBtn"
+						type="submit"
+						onClick={signIn}
+					>
+						Login In
+					</button>
 				</form>
 				<p>
 					by signing-in you agree to the
