@@ -8,6 +8,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./Login";
 import { auth } from "firebase";
 import { useStateValue } from "./StateProvider";
+import Payment from "./Payment";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+const promise = loadStripe(
+	"pk_test_51HZkaXDRyVS1dWho0gUdBCf9CD2Vk4jobdrPXa1YgmAsa7kpDIu4zrS0Jy2WIuXj3SEkiWTkHgqbmsneEpGBQzHe00cabBJvQu"
+);
 
 function App() {
 	const [{}, dispathch] = useStateValue();
@@ -29,7 +36,7 @@ function App() {
 			}
 		});
 	}, []);
-	
+
 	return (
 		<Router>
 			<div className="app">
@@ -40,6 +47,12 @@ function App() {
 					<Route path="/checkout">
 						<Header />
 						<Checkout />
+					</Route>
+					<Route path="/payment">
+						<Header />
+						<Elements stripe={promise}>
+							<Payment />
+						</Elements>
 					</Route>
 					<Route path="/">
 						<Header />
