@@ -11,6 +11,7 @@ import { useStateValue } from "./StateProvider";
 import Payment from "./Payment";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import Orders from "./Orders";
 
 const promise = loadStripe(
 	"pk_test_51HZkaXDRyVS1dWho0gUdBCf9CD2Vk4jobdrPXa1YgmAsa7kpDIu4zrS0Jy2WIuXj3SEkiWTkHgqbmsneEpGBQzHe00cabBJvQu"
@@ -18,6 +19,7 @@ const promise = loadStripe(
 
 function App() {
 	const [{}, dispathch] = useStateValue();
+
 	useEffect(() => {
 		auth().onAuthStateChanged((authUser) => {
 			console.log("this user ->>>", authUser);
@@ -41,6 +43,10 @@ function App() {
 		<Router>
 			<div className="app">
 				<Switch>
+					<Route path='/orders'>
+						<Header />
+						<Orders />
+					</Route>
 					<Route path="/login">
 						<Login />
 					</Route>
