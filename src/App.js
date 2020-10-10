@@ -14,6 +14,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./Orders";
 
 const promise = loadStripe(
+	// public API key
 	"pk_test_51HZkaXDRyVS1dWho0gUdBCf9CD2Vk4jobdrPXa1YgmAsa7kpDIu4zrS0Jy2WIuXj3SEkiWTkHgqbmsneEpGBQzHe00cabBJvQu"
 );
 
