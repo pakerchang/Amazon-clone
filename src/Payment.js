@@ -135,7 +135,7 @@ function Payment() {
 									prefix={"$"}
 								/>
 							</div>
-							<button
+							<button className='payment__detailsBtn'
 								disabled={processing || disable || succeeded}
 							>
 								<span>
