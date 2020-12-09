@@ -1,4 +1,12 @@
 
+Download the project
+
+Open the project and terminal
+
+```npm i``` then ```npm start```
+
+type in ```http://localhost:3000/``` on website
+
 # [Demo](https://clone-8001b.web.app/)
 
 # [Full Stack Amazon-Clone by CleverProgrammer](https://www.youtube.com/c/CleverProgrammer/videos)
